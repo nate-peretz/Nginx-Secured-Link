@@ -12,11 +12,11 @@ It is required to have the same structure inside buildSecuredUrl.php:
 Please note that MD5 requires binary mode. You can check the examples below:
 # PHP
 ```php
-return $url .'?md5='. md5( $url . $_SERVER['REMOTE_ADDR'] .' <custom string>', true) .'&expires='. $expiration;
+return $url .'?md5='. md5( $url . $_SERVER['REMOTE_ADDR'] .' <custom string>') .'&expires='. $expiration;
 ```
 # JS
 ```javascript
-return url + '?md5=' + $.md5( url + user_ip + ' <custom_string>', ' <custom_string>') + '&expires=' + expiration;
+return url + '?md5=' + $.md5( url + user_ip + ' <custom_string>') + '&expires=' + expiration;
 ```
 # Nginx example
 Secured links must be set via your site's configuration. You can also play with the returned errors as you wish.
