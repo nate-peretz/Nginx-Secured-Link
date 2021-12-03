@@ -5,7 +5,7 @@ secure_link_md5 "$arg_expires$uri$remote_addr <custom string>";
 ```
 This is your "encryption" structure. You can add your custom string and change the order of the variables as you wish. For example-
 ```nginx
-secure_link_md5 "$remote_addr$arg_expires$uri no_one_can_guess_my_secret>";
+secure_link_md5 "$remote_addr$arg_expires$uri <custom string>";
 ```
 It is required to have the same structure inside buildSecuredUrl.php:
 # MD5 (Binary mode)
